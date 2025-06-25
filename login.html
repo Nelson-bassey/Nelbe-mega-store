@@ -21,7 +21,7 @@
 
 
     <div class="note">
-      Don't have an account? <a href="signup.html">Sign up</a>
+      Don't have an account? <a href="index.html">Sign up</a>
     </div>
   </div>
 
@@ -39,7 +39,7 @@
       if (savedUser && savedUser.email === email && savedUser.password === password) {
         localStorage.setItem('neltech_logged_in', 'true');
         alert('Login successful! Redirecting...');
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
       } else {
         alert('Invalid credentials. Try again.');
       }
