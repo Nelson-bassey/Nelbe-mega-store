@@ -9,6 +9,10 @@
 <body>
   <header>
     <h1>Nelbe Mega Store</h1>
+      <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search products... (e.g. phone, laptop, shoes, food items)">
+    <span class="search-icon">🔍</span>
+  </div>
     <div class="cart-icon" onclick="showCart()">
       🛒 <span class="cart-count" id="cartCount">0</span>
     </div>
@@ -20,12 +24,7 @@
 </div> -->
 
 
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Search products... (e.g. phone, laptop, shoes, food items)">
-    <span class="search-icon">🔍</span>
-  </div>
-
-  <div class="products" id="productList"></div>
+  <section> <div class="products" id="productList"></div></section>
 
   <footer>
     &copy; 2025 Nelbe Mega Store | <a href="signup.html" onclick="signout()">signout</a>
