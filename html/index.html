@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nelbe Mega Store</title>
+  <link rel="stylesheet" href="/styles/main.css" type="text/css">
+</head>
+<body>
+  <header>
+    <h1>Nelbe Mega Store</h1>
+    <div class="cart-icon" onclick="showCart()">
+      🛒 <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </header>
+
+  <!-- === this part is responsible for the -->
+  <!-- <div class="carousel">
+     <div class="carousel-track" id="carouselTrack"></div>
+</div> -->
+
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search products... (e.g. phone, laptop, shoes, food items)">
+    <span class="search-icon">🔍</span>
+  </div>
+
+  <div class="products" id="productList"></div>
+
+  <footer>
+    &copy; 2025 Nelbe Mega Store | <a href="/html/signup.html" onclick="signout()">signout</a>
+     <!-- <button class="theme-toggle" onclick="toggleTheme()"> Toggle Theme</button> -->
+  </footer>
+  <script src="/scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #121212;
+      --text-light: #111;
+      --text-dark: #eee;
+      --primary: #ff6f00;
+      --accent: #ffc107;
+      --card-bg-light: #fff;
+      --card-bg-dark: #1f1f1f;
+    }
+
+    [data-theme="light"] {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    [data-theme="dark"] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      transition: 0.3s all ease;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    .search-bar {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .search-bar input {
+      padding: 10px 35px 10px 10px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 35px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: gray;
+      pointer-events: none;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .card {
+      background: var(--card-bg-light);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    [data-theme="dark"] .card {
+      background: var(--card-bg-dark);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      height: 160px;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .card h4 {
+      min-height: 40px;
+      font-size: 1rem;
+    }
+
+    .price {
+      color: var(--primary);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .cart-btn {
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cart-icon {
+      position: relative;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 50%;
+    }
+
+    /* .theme-toggle {
+      bottom: 10px;
+      position: static;
+      left: 10px;
+      background: black;
+      border: 2px solid var(--primary);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    } */
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .card img {
+        height: 140px;
+      }
+
+      .search-bar input {
+        font-size: 0.9rem;
+      }
+    }
+
+
+
+    /* ====this part is respnsible for the rotation */
+    /* .carousel {
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px;
+  padding: 1rem;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: white;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+} */

@@ -1,0 +1,96 @@
+ :root {
+      --bg-light: #f0f0f0;
+      --bg-dark: #121212;
+      --text-light: #222;
+      --text-dark: #eee;
+      --primary: #2a5298;
+      --accent: #1e3c72;
+    }
+
+    [data-theme="light"] {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    [data-theme="dark"] {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      animation: slideIn 0.5s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      /* color: var(--primary); */
+      color: orange;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      /* background: var(--primary); */
+      color: white;
+      background-color: orange;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    button:hover {
+      /* background: var(--accent); */
+      background-color: orange;
+    }
+
+
+    .note {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .note a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      [data-theme="dark"] .container {
+        background-color: #1e1e1e;
+      }
+    }
